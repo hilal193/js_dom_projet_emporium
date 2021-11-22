@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/app.css">
+    <title>Document</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-white">
+
+<!-- Header -->
+<header class="d-flex flex-column align-items-center bg-white">
+    <!-- Début NavBar -->
+    <div>
+      <!-- EN BOOTSTRAP py => padding vertical haut et bas-->
+      <!-- fw-bold=> font weight: bold -->
+      <h1 class="text-center py-3 pt-5 fw-bold text-dark">
+        emporium.
+      </h1>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-light maNav">
+      <div class="ms-5 mynav container-fluid d-flex justify-content-between">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- mes bouton link -->
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+          <div class="navbar-nav mx-auto mb-2 mb-lg-0 ">
+            <a class="nav-link text-dark" href="#">HOME</a>
+            <a class="nav-link text-dark" href="#">PRODUCT </a>
+            <a class="nav-link text-dark" href="#">BLOG</a>
+            <a class="nav-link text-dark" href="#">ELEMENTS</a>
+            <a class="nav-link text-dark" href="#">ABOUT</a>
+            <a class="nav-link text-dark" href="#">CONTACT</a>
+            <!-- mode sombre -->
+            <a class="nav-link text-dark">
+              <button type="button" id="btnJour" class="btn btn-outline-dark jour taille"></button>
+              <button type="button" id="btnNuit" class="btn btn-outline-dark bg-black nuit taille"></button>
+              <button type="button" class="connexionn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                CONNEXION
+              </button>
+
+              <!-- Login début-->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="dflex align-content-between">
+                      <label  for="" class="emporiumLabel"> Emporium</label>
+                      <!-- button close viens de bootstrap, dismiss au click va enlever ma class modal -->
+                      <button type="button" class="btn-close bg-danger m-1" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    </div>
+                    <div class="modal-header">
+                      
+                      <h5 class="inscrit modal-title text-center bg-danger text-light largeur bordurePetit py-1" id="exampleModalLabel" >Connexion</h5>
+                      <h5 class="enregistre modal-title text-center bg-danger text-light largeur bordurePetit py-1" id="exampleModalLabel">Inscription</h5>
+                    </div>
+                    <div class="modal-body d-flex">
+                      <div class="w-50 d-flex flex-column  gauche">
+                        <label for="">adresse email</label>
+                        <input class="my-2 w-100" type="text" placeholder="abcdef@gmail.com">
+                        <p class="petitP" style="font-size: small;">we'll never share your email with anyone else.</p>
+                        <label for="">mot de passe</label>
+                        <input class="my-2 w-100" type="text" placeholder="*********">
+                        <div class="dflex">
+
+                          <input type="checkbox"> <label for="">Check me out</label>
+                        </div>
+                       
+                        <button class="btn-info text-white w-50 mt-5 inscriptionBleu">Connection</button>
+                        <div class="d-flex pt-3" style="align-items: center; text-align: center; justify-content: center;">
+                          <i class="fab fa-facebook  mx-1 h-25 text-primary"></i>
+                          <i class="fab fa-instagram  mx-1 h-25"></i>
+                          <i class="fab fa-snapchat-ghost  mx-1 h-25 text-warning"></i>
+                          <i class="fas fa-laptop-code  mx-1 h-25"></i>
+
+                        </div>
+                      </div>
+                      <!-- <div class="w-50 d-flex flex-column hide-content droite"> -->
+                        <!-- ici je mets hide-content pour déja cacher ma div droite -->
+                        <div class="w-50 d-flex flex-column hide-content droite">
+                        <label for="">adresse email</label>
+                        <input class="my-2 w-100" type="text" placeholder="abcdef@gmail.com">
+                        <p class="petitP" style="font-size: small;">we'll never share your email with anyone else.</p>
+                        <label for="">mot de passe</label>
+                        <input class="my-2 w-100" type="text" placeholder="*********">
+                        <label for="">Confirmer votre mot de passe</label>
+                        <input class="my-2 w-100" type="text" placeholder="*********">
+                        <div class="dflex">
+
+                          <input type="checkbox"> <label for="">Homme</label>
+                          <input type="checkbox"> <label for="">Femme</label>
+                        </div>
+                       
+                        <button class="btn-info text-white w-50 mt-3 inscriptionBleu" >Inscription</button>
+                        <div class="d-flex pt-3" style="align-items: center; text-align: center; justify-content: center;">
+                          <i class="fab fa-facebook  mx-1 h-25 text-primary"></i>
+                          <i class="fab fa-instagram  mx-1 h-25"></i>
+                          <i class="fab fa-snapchat-ghost  mx-1 h-25 text-warning"></i>
+                          <i class="fas fa-laptop-code  mx-1 h-25"></i>
+
+                        </div>
+                      </div>
+                      <!-- Login fin-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="espace"></div>
+    <!-- fin du NavBar -->
+  </header>
+  <!-- fin Header -->
+
+  <!-- Ma Section Main-->
+  <main>
+    <!-- la regle de 3 => container - row - col  -->
+    <section class="container-fluid sect1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="container m-lg-5 my-media">
+              <span id="ban-empo" class="text-danger">
+                Shop at
+              </span>
+              <p class="noir" id="ban-empo1">emporium.</p>
+              <p class="text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus dolores sint aliquam cumque quod magni atque nemo suscipiti.</p>
+              <button type="button" class="btn btn-danger monBtnSale"><span id="monSale">SALE
+                  ITEMS</span></button>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <!-- img-fluid viens de bootstrap-->
+            <img src="/public/img/slider-1.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+        <!-- room items clothes en image -->
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="image1 tacos">
+            <!-- w en bootstrap veut dire width, il y a tout dans la doc  -->
+            <h3 class="border-bottom border-2 w-75 text-center text-white">Living Room</h3>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="image2 tacos">
+            <h3 class="border-bottom border-2 w-75 text-center text-white">Sale Items</h3>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="image3 tacos">
+            <h3 class=" border-bottom border-2 w-75 text-center text-white">Clothes</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="produits">
+      <div class="container">
+        <h2 class="text-center mt-5 mb-5 fw-bold">Recents Products</h2>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="avant apres">
+              <img src="/public/img/products_mini/product-luxry-sofa.jpg" class="img-fluid my-images" alt="">
+            </div>
+            <h6 class="text-center fw-bold mt-4 text-dark">Luxury sofa</h6>
+            <p class="text-danger text-center fw-bold">$600.00</p>
+          </div>
+          <div class="col-sm-4">
+            <div class="avant apres">
+              <img src="/public/img/products_mini/product-gloves.jpg" class="img-fluid my-images" alt="">
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btn-danger rounded-circle mt-4 "
+                style="height: 70px; width: 70px;">SALE!</button>
+              <div class="ms-4">
+                <p class="fw-bold text-center mt-4 d-block text-dark">Leather Gloves</p>
+                <span class="text-center text-danger fw-bold "> <del class="text-secondary">$34.00</del>
+                  $27.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="avant apres">
+              <img src="/public/img/products_mini/product-cups.jpg" class="img-fluid my-images" alt="">
+            </div>
+            <h6 class="text-center fw-bold mt-4 text-dark">Colorful Bowl</h6>
+            <p class="text-danger text-center fw-bold">$18.00</p>
+          </div>
+        </div>
+        <!-- 2 eme row -->
+        <div class="row mt-5">
+          <div class="col-sm-4">
+            <div class="avant apres">
+              <img src="/public/img/products_mini/product-bag.jpg" class="img-fluid my-images" alt="">
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+              <button type="button" class="btn btn-danger rounded-circle mt-4 "
+                style="height: 70px; width: 70px;">SALE!</button>
+              <div class="ms-4">
+                <p class="fw-bold text-center mt-4 d-block text-dark">Women Bag</p>
+                <span class="text-center text-danger fw-bold "> <del class="text-secondary">$420.00 </del>350.00</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="avant apres">
+              <img src="/public/img/products_mini/product-tshitr.jpg" class="img-fluid my-images" alt="">
+            </div>
+            <h6 class="text-center fw-bold mt-4 text-dark">Minimal T-shirt</h6>
+            <p class="text-danger text-center fw-bold">$15.00</p>
+          </div>
+          <div class="col-sm-4">
+            <div class="avant apres">
+              <img src="/public/img/products_mini/product-plates.jpg" class="img-fluid my-images" alt="">
+            </div>
+            <h6 class="text-center fw-bold mt-4 text-dark">Plates Set</h6>
+            <p class="text-danger text-center fw-bold">$30.00</p>
+          </div>
+        </div>
+        <!-- 3 eme row -->
+        <div class="row mt-5">
+          <div class="col-sm-4">
+            <div class="avant apres">
+              <img src="/public/img/products_mini/product-modern-sofa.jpg" class="img-fluid my-images" alt="">
+            </div>
+            <h6 class="text-center fw-bold mt-4 text-dark">Modern Sofa</h6>
+            <p class="text-danger text-center fw-bold">$900.00</p>
+          </div>
+          <div class="col-sm-4">
+            <div class="avant apres">
+              <img src="/public/img/products_mini/product-bed.jpg" class="img-fluid my-images" alt="">
+            </div>
+            <h6 class="text-center fw-bold mt-4 text-dark">Bed Linen</h6>
+            <p class="text-danger text-center fw-bold">$79.00</p>
+          </div>
+          <div class="col-sm-4">
+            <div class="avant apres">
+              <img src="/public/img/products_mini/product-shoes.jpg" class="img-fluid my-images" alt="">
+            </div>
+            <h6 class="text-center fw-bold mt-4 text-dark">Luxury sofa</h6>
+            <p class="text-danger text-center fw-bold">$60.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./Items -->
+    <!-- Carousel -->
+    <section>
+      <div class="discover mt-5">
+        <div class="text-center pt-5">
+          <h3 class="text-white fw-bold discover-text ">Discover Thousands Of Great Products</h3>
+          <div class="discover-btn">
+            <button type="button" class="btn btn-danger">LEARN MORE</button>
+          </div>
+        </div>
+      </div>
+    </section>
+        <section id="hotFashion">
+          <h2 class="text-center text-dark mt-3">Hot Fashion Products</h2>
+          <div class="myCarousel">
+   
+            <div class="img img0">
+              <div class="beforeImg">
+                <img src="./public/img/products_mini/product-luxry-sofa.jpg" alt="sofa" class="w-100">
+              </div>
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <span class="text-dark mt-4">Luxury Sofa</span>
+                <span class="text-danger">$600.00</span>
+              </div>
+            </div>
+   
+            <div class="img img2">
+              <div class="beforeImg">
+                <img src="./public/img/products_mini/product-gloves.jpg" alt="gloves" class="w-100">
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <div style="height: 50px; width: 70px;"
+                  class="bg-danger d-flex align-items-center justify-content-center rounded-pill me-4 mt-4">
+                  <p class="sale bg-danger text-light p-0 m-0">Sale!</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                  <span class="text-dark mt-4">Leather Gloves</span>
+                  <span>
+                    <span class="text-secondary text-decoration-line-through">$34.00</span>
+                    <span class="text-danger">$27.00</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+   
+            <div class="img img3">
+              <div class="beforeImg">
+                <img src="./public/img/products_mini/product-cups.jpg" alt="bowl" class="w-100">
+              </div>
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <span class="text-dark mt-4">Colorful Bowl</span>
+                <span class="text-danger ">$18.00</span>
+              </div>
+            </div>
+   
+            <div class="img img4">
+              <div class="beforeImg">
+                <img src="./public/img/products_mini/product-bag.jpg" alt="sac" class="w-100">
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <div style="height: 50px; width: 70px;"
+                  class="bg-danger d-flex align-items-center justify-content-center rounded-pill me-4 mt-4">
+                  <p class="sale bg-danger text-light p-0 m-0">Sale!</p>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                  <span class="text-dark mt-4">Leather Gloves</span>
+                  <span>
+                    <span class="text-secondary text-decoration-line-through">$420.00</span>
+                    <span class="text-danger">$350.00</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+   
+            <div class="img img5">
+              <div class="beforeImg">
+                <img src="./public/img/products_mini/product-tshitr.jpg" alt="shirt" class="w-100">
+              </div>
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <span class="text-dark mt-4">Minimal T-shirt</span>
+                <span class="text-danger ">$15.00</span>
+              </div>
+            </div>
+   
+            <div class="img img6">
+              <div class="beforeImg">
+                <img src="./public/img/products_mini/product-plates.jpg" alt="plates" class="w-100">
+              </div>
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <span class="text-dark mt-4">Plate Set</span>
+                <span class="text-danger ">$30.00</span>
+              </div>
+            </div>
+   
+            <div class="img img7">
+              <div class="beforeImg">
+                <img src="./public/img/products_mini/product-modern-sofa.jpg" alt="Sofa" class="w-100">
+              </div>
+              <div class="d-flex flex-column justify-content-center align-items-center">
+                <span class="text-dark mt-4">Modern Sofa</span>
+                <span class="text-danger ">$900.00</span>
+              </div>
+            </div>
+   
+            <div class="divIndicators">
+              <span class="bg-light myIndicator indic cercleN" ></span>
+              <span class="bg-light myIndicator1 indic cercleN" ></span>
+              <span class="bg-light myIndicator2 indic cercleN" ></span>
+              <span class="bg-light myIndicator3 indic cercleN" ></span>
+              <span class="bg-light myIndicator4 indic cercleN" ></span>
+              <span class="bg-light myIndicator5 indic cercleN" ></span>
+              <span class="bg-light myIndicator6 indic cercleN" ></span>
+            </div>
+          </div>
+        </section>
+        <!-- ./Carousel -->
+      </main>
+      <!-- ./Main -->                                      
+      <section class="container-fluid mt-5">
+          <div class="row mt-5 d-flex mx-1 justify-content-evenly ">
+              <div class="col-sm-12 col-md-12 col-lg-4" style="height: 400px;">
+                <div class="text-center bg-light mt-5 shimpents">
+                  <!-- fs en bootstrap veut dire font-size -->
+                    <i class="far fa-check-circle mb-5 mt-4 fs-1 icon2"></i>
+                    <!-- fw en bootstrap veut dire font-weight -->
+                    <h5 class="fw-bold mb-5">TRUSTED BY 10.000+ CUSTOMES</h5>
+                    <!-- px en bootstrap veut dire padding horizontale(gauche droite) -->
+                    <p class="px-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio adipisci reprehenderit
+                        nulla amet impedit nostrum officia.</p>
+                        <button class="m-3 text-white bg-darkm-3 bg-dark learnMore">LEARN MORE</button>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4" style="height: 400px;">
+                    <div class="text-center text-white mt-5 shipments bg-danger">
+                        <i class="fas fa-paper-plane mb-5 mt-4 fs-1 icon1"></i>
+                        <h5 class="fw-bold mb-5 text-white">VERY FAST SHIPPING</h5>
+                        <p class="px-5 text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio adipisci
+                            reprehenderit nulla amet impedit nostrum officia.</p>
+                            <button class="m-3 text-dark learnMore">LEARN MORE</button>
+                        </div>
+                    </div>
+        <div class="col-sm-12 col-md-12 col-lg-4" style="height: 400px;">
+            <div class="text-center bg-light mt-5 shimpents">
+                <i class="far fa-check-circle mb-5 mt-4 fs-1 icon2"></i>
+                <h5 class="fw-bold mb-5">TRUSTED BY 10.000+ CUSTOMES</h5>
+                <p class="px-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est odio adipisci reprehenderit
+                    nulla amet impedit nostrum officia.</p>
+                    <button class="m-3 text-white bg-dark learnMore">LEARN MORE</button>
+                </div>
+            </div>
+        </div>
+    </section>    
+  <!-- Footer-->
+  <footer class="ftr_bg mt-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 text-dark blanc">
+          <h4 class="trois ms-1">ABOUT US</h4>
+          <p class="text-dark-50 ms-5">A wonderful serenity has taken possession of my entire soul, like these sweet
+            mornings of spring which i enjoy with my whole heart. I am alone, and feel the charm of existence in this
+            spot, which was created for the bliss of</p>
+        </div>
+        <div class="col-lg-4">
+          <h4 class="text-dark trois blanc">RECENTS POSTS</h4>
+          <p class="text-dark ms-5 blanc">> Hello World</p>
+          <p class="text-dark ms-5 blanc">> Wonderfull serenity has taken</p>
+          <p class="text-dark ms-5 blanc">> in my soul and absorb its power</p>
+          <p class="text-dark ms-5 blanc">> i hhear the buzz of the little</p>
+        </div>
+        <div class="col-lg-4">
+          <h4 class="trois text-dark blanc">TAG CLOUD</h4>
+          <!-- mx en bootstrap veut dire margin horizontale -->
+          <button type="button" class="btn btn-outline-secondary mx-1">business</button>
+          <button type="button" class="btn btn-outline-secondary mx-1">confidence</button>
+          <button type="button" class="btn btn-outline-secondary mx-1">gadgets</button>
+          <button type="button" class="btn btn-outline-secondary mx-1">identify</button>
+          <button type="button" class="btn btn-outline-secondary mx-1">logo</button>
+          <button type="button" class="btn btn-outline-secondary mx-1">photography</button>
+          <button type="button" class="btn btn-outline-secondary mx-1">time</button>
+          <button type="button" class="btn btn-outline-secondary mx-1">works</button>
+          <button type="button" class="btn btn-outline-secondary mx-1">work-space</button>
+          <button type="button" class="btn btn-outline-secondary mx-1">trips</button>
+        </div>
+        <!-- bas cote du footer -->
+        <div class="text-center text-dark p-3 bg-dark">
+          <p class="bg-dark">COPYRIGHT © 2020 GOODLAYERS, ALL RIGHT RESERVED:</p>
+        </div>
+      </div>
+</footer>
+  <!-- ./Footer-->
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+  <script type="module" src="./public/js/app.js"></script>
+</body>
+</html>
